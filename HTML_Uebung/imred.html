@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- Template by html.am -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Column Layout &mdash; Left Menu with Header &amp; Footer</title>
+		<style type="text/css">
+            .loader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #c3c3c3;
+                transition: opacity 0.75s, visibility 0.75s;
+            }
+
+            .loader--hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .loader::after {
+                content: "";
+                width: 75px;
+                height: 75px;
+                border: 15px solid #6c6c6c;
+                border-top-color: #009578;
+                border-radius: 50%;
+                animation: loading 0.75s ease infinite;
+            }
+
+            @keyframes loading {
+                from {
+                    transform: rotate(0turn);
+                }
+                to {
+                    transform: rotate(1turn);
+                }
+            }
+		
+			body {
+				margin:0;
+				padding:0;
+				font-family: Sans-Serif;
+				line-height: 1.5em;
+			}
+			
+			#header {
+				background: hsl(0, 100%, 60%);
+				height: 80px;
+			}
+			
+			#header h1 {
+				margin: 0;
+				padding-top: 25px;
+				;
+			}
+			
+			main {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 100%;
+			}
+			
+			#nav {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 230px;
+				margin-left: -100%;
+				background: hsl(0, 0%, 65%);
+			}
+			
+			#footer {
+				clear: left;
+				width: 100%;
+				background: hsl(0, 100%, 60%);
+				text-align: center;
+				padding: 15px 0;
+			}
+	
+			#wrapper {
+				overflow: hidden;
+			}
+						
+			#content {
+				margin-left: 230px; /* Same as 'nav' width */
+			}
+			
+			.innertube {
+				margin: 15px; /* Padding for content */
+				margin-top: 0;
+			}
+		
+			p {
+				color: #ffffff;
+				font-size: 30px;
+			}
+
+			main {
+				background-color: #6c6c6c;
+				background-image: none;
+			}
+	
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			nav ul a {
+				color: blue;
+				text-decoration: none;
+			}
+		
+		</style>
+		
+		<script type="text/javascript">
+			window.addEventListener("load", ()=> {
+                const loader = document.querySelector(".loader");
+
+                loader.classList.add("loader--hidden");
+
+                loader.addEventListener("transitionend", () => {
+                    document.body.removeChild(document.querySelector(".loader"));
+                });
+            });
+		</script>	
+	
+	</head>
+	
+	<body>
+        <div class="loader loader--hidden"></div>
+		<header id="header">
+			<div class="innertube">
+				<h1>Knisel</h1>
+			</div>
+		</header>
+		
+		<div id="wrapper">
+		
+			<main>
+				<div id="content">
+					<div class="innertube">
+						<p>Hey I am imred, a Instructor that has been working for Knisel since the beginning of the company/business.</p>
+					</div>
+				</div>
+			</main>
+			
+			<nav id="nav">
+				<div class="innertube">
+                    <h3>Home</h3>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                    </ul>
+					<h3>Our Team</h3>
+					<ul>
+						<li><a href="Rihard.html">Rihard (Ticketcollector)</a></li>
+						<li><a href="imred.html">imred (Instructor)</a></li>
+						<li><a href="Talle.html">Talle (Driver)</a></li>
+						<li><a href="Lukas.html">Lukas (Driver)</a></li>
+						<li><a href="Drippie.html">Drippie (Driver)</a></li>
+						<li><a href="Zvoni.html">Zvoni (Owner)</a></li>
+					</ul>
+					<h3>Application</h3>
+                    <ul>
+                        <li><a href="Applications section.html">Applications</a></li>
+                    </ul>
+					<h3>Booking</h3>
+                    <ul>
+                        <li><a href="Book us.html">Book us!</a></li>
+                    </ul>
+					<h3>Coming soon...</h3>
+                    <ul>
+                        <li><a href="Coming soon 1.html">coming soon!</a></li>
+                    </ul>
+					<h3>Coming soon...</h3>
+                    <ul>
+                        <li><a href="Coming soon 2.html">coming soon!</a></li>
+                    </ul>
+				</div>
+			</nav>
+		
+		</div>
+		
+		<footer id="footer">
+			<div class="innertube">
+				<p>!NOT REAL KNISEL!</p>
+			</div>
+		</footer>
+	
+	</body>
+</html>
